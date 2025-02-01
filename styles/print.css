@@ -1,0 +1,13 @@
+body,
+.page {
+    margin: 0;
+    box-shadow: none;
+    -webkit-print-color-adjust: exact;
+}
+@page {
+    margin: 0;
+    size: A4;
+}
+.no-print {
+    display: none;
+}

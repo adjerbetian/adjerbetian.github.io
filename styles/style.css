@@ -1,0 +1,220 @@
+html {
+    font-family: "Quicksand", sans-serif;
+    font-size: 9pt;
+}
+
+body {
+    --primary: rgb(0, 40, 120);
+    --secondary: rgb(182, 114, 78);
+
+    background-color: rgb(128, 128, 128);
+    color: rgb(56, 67, 71);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding-inline-start: 4mm;
+}
+ul.no-bullet {
+    list-style: none;
+    padding-inline-start: 0;
+}
+ul.no-bullet li:not(:first-child) {
+    margin-top: 2mm;
+}
+i {
+    color: var(--secondary);
+}
+.page {
+    --section-padding: 2mm;
+    --article-margin: 4mm;
+
+    box-shadow: 0 0 10px rgb(50, 50, 50);
+    position: relative;
+    background-color: white;
+    margin: 30px auto;
+    box-sizing: border-box;
+    width: 210mm;
+    height: 297mm;
+    padding: 16mm;
+}
+header {
+    margin-bottom: 2em;
+    display: flex;
+    animation: fadeIn 3s ease;
+}
+.profile img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+}
+header h1 {
+    font-family: "Open Sans", sans-serif;
+    color: var(--primary);
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+header h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: var(--secondary);
+    font-size: 1.6rem;
+    margin-bottom: 2mm;
+}
+header ul.tags {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+header ul.tags > li {
+    color: var(--secondary);
+    font-weight: 700;
+    margin: 0 2mm 0 0;
+}
+header ul.tags > li:before {
+    content: "#";
+}
+header .pitch {
+    font-weight: 700;
+    max-width: 330px;
+    color: var(--primary);
+}
+header .pitch p {
+    margin: 0;
+}
+header .contact {
+    align-self: flex-end;
+    margin-right: -20mm;
+    margin-left: 7mm;
+    font-size: 0.95rem;
+}
+main,
+footer {
+    margin: 0 calc(-1 * var(--section-padding));
+}
+main {
+    display: flex;
+}
+main > div:first-child {
+    flex: 1;
+}
+main > div:last-child {
+    width: 32%;
+}
+section {
+    padding: var(--section-padding);
+}
+section.experience {
+    padding-right: 5mm;
+}
+section.experience article:not(:first-of-type) {
+    padding-top: calc(var(--article-margin) / 2);
+    border-top: 0.4mm rgb(229, 229, 229) solid;
+}
+section h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: var(--primary);
+    border-bottom: 0.4mm solid var(--primary);
+    margin-bottom: -2mm;
+}
+article {
+    margin: var(--article-margin) 0;
+}
+article > * {
+    margin-top: 0.7mm;
+}
+article .head {
+    display: flex;
+    align-items: center;
+}
+article .head h3 {
+    flex: 1;
+}
+article h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+article h4 {
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+article .company-description {
+    margin-top: -0.5mm;
+    margin-bottom: 2mm;
+}
+article .period {
+    font-size: 0.9rem;
+}
+article .period i {
+    color: rgb(172, 172, 172);
+}
+article.books q {
+    font-style: italic;
+}
+article.books q:before,
+article.books q:after {
+    content: "";
+}
+article.tools span {
+    padding: 1mm;
+    margin-top: 0;
+    border-bottom: 0.2mm solid #a9a9a9;
+    display: inline-block;
+}
+article.projects li > a {
+    display: flex;
+    align-items: baseline;
+}
+article.projects i {
+    min-width: 5mm;
+}
+.url {
+    font-size: 0.8rem;
+}
+article.interests {
+    display: flex;
+    flex-wrap: wrap;
+}
+article.interests > * {
+    flex-grow: 1;
+}
+article ul.spaced > li {
+    margin-bottom: 2mm;
+}
+.actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5mm;
+    font-size: 1.6rem;
+}
+.actions i {
+    color: inherit;
+}
+.actions > * {
+    padding: 2mm;
+    cursor: pointer;
+    color: rgba(56, 67, 71, 0.3);
+    transition: color 0.1s linear;
+}
+.actions > *:hover {
+    cursor: pointer;
+    color: rgba(56, 67, 71, 1);
+}
